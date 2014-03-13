@@ -22,8 +22,19 @@
         </h1>
 
         <ul class="side-nav">
-          <li>Sign up</li>
-          <li>Log in</li>
+
+          <% if logged_in? %>
+
+            <li><%= current_user.username %></li>
+            <li><%= link_to "Add a room", new_room_path %></li>
+
+          <% else %>
+
+            <li><%= link_to "Sign up", new_user_path %></li>
+            <li>Log in</li>
+
+          <% end %>
+
         </ul>
 
 
