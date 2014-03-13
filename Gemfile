@@ -69,3 +69,6 @@ gem 'omniauth-linkedin'
 # active admin
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+# add foundation for styling
+gem 'foundation-rails'
+
