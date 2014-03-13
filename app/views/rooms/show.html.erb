@@ -1,0 +1,19 @@
+<h2>
+  <%= @room.name %>
+</h2>
+
+<%= simple_format @room.address %>
+
+<p>
+  There are <%= pluralize @room.number_of_beds, "bed" %>
+</p>
+
+<p>
+  <%= @room.price_in_pence %> pence
+</p>
+
+<p>
+  <%= link_to "Edit this room", edit_room_path(@room), class: "button" %>
+  <%= link_to "Delete this room", room_path(@room), method: :delete,
+      class: "button", confirm: "Are you sure?" %>
+</p>

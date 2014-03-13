@@ -1,0 +1,12 @@
+<h2>Rooms available</h2>
+
+<% @rooms.each do |room| %>
+  <div>
+    <h3><%= link_to room.name, room_path(room) %></h3>
+  </div>
+<% end %>
+
+
+<p>
+  <%= link_to "Add a new room", new_room_path, class: "button" %>
+</p>
