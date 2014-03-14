@@ -1,4 +1,11 @@
 Onboard::Application.routes.draw do
+
+  # this could be a static about page
+  # get "about" => "contents#about"
+
+  get "auth/:provider/callback" => "social_logins#create"
+
+
   # set up the index, show, new, create, edit, update, destroy for rooms
   # path: "places"
   resources :rooms do
