@@ -12,8 +12,22 @@
   <%= @room.price_in_pence %> pence
 </p>
 
-<p>
-  <%= link_to "Edit this room", edit_room_path(@room), class: "button" %>
-  <%= link_to "Delete this room", room_path(@room), method: :delete,
-      class: "button", confirm: "Are you sure?" %>
-</p>
+
+<% if @room.user.present? %>
+  <p>This room was posted by <%= @room.user.username %>
+<% end %>
+
+<% if logged_in? and current_user == @room.user %>
+  <p>
+    <%= link_to "Edit this room", edit_room_path(@room), class: "button" %>
+    <%= link_to "Delete this room", room_path(@room), method: :delete,
+        class: "button", confirm: "Are you sure?" %>
+  </p>
+
+<% else %>
+
+  <p>
+    <a href="#" class="button">Book this room</a>
+  </p>
+
+<% end %>
