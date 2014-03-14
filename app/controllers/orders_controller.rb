@@ -34,7 +34,9 @@ class OrdersController < ApplicationController
       #   card: @order.stripe_token,
       #   plan: "gold"
       # )
-
+      
+      # to send out a new order email
+      OrderMailer.new_order(@order).deliver
 
       flash[:success] = "Your room has been booked"
       redirect_to room_path(@room)
