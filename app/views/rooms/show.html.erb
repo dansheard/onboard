@@ -1,3 +1,9 @@
+<p>
+  <%= image_tag @room.image(:large) %>
+
+  <%= link_to "Download", @room.image.url %>
+</p>
+
 <h2>
   <%= @room.name %>
 </h2>
