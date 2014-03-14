@@ -33,7 +33,8 @@
 <% else %>
 
   <p>
-    <a href="#" class="button">Book this room</a>
+    <%= link_to "Book this room", new_room_order_path(@room),
+      class: "button" %>
   </p>
 
 <% end %>

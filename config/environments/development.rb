@@ -1,3 +1,9 @@
+# this is your Stripe API password (secret)
+Stripe.api_key = "sk_test_6oSTPAoDWLjFONsDyh3YP6nD"
+# this is your Stripe API username (key)
+STRIPE_KEY = "pk_test_9O7fUx5kbxKUp5lS7n35vDCr"
+
+
 Onboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
